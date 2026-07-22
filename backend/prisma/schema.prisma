@@ -13,8 +13,7 @@ model User {
   password   String
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
-
-  tasks Task[]
+  tasks      Task[]
 }
 
 model Task {
@@ -26,9 +25,8 @@ model Task {
   due_date    DateTime
   created_at  DateTime @default(now())
   updated_at  DateTime @updatedAt
-
-  userId Int
-  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId      Int
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
   @@index([status])

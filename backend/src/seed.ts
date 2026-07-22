@@ -1,7 +1,10 @@
+import "dotenv/config";
 import bcrypt from "bcrypt";
 import { prisma } from "./lib/prisma.js";
 
 async function seed() {
+  console.log("DATABASE:", process.env.DATABASE_URL);
+
   const email = "admin@test.com";
   const password = "123456";
 
