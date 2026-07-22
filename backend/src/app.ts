@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/health", (_req, res) => res.status(200).json({ message:"sever running" }));
 
 app.use("/api/auth",Authrouter);
-app.use("/api/auth",taskRouter);
+app.use("/api/tasks",taskRouter);
 
 app.use(notFound);
 app.use(errorHandler);

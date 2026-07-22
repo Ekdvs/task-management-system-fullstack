@@ -4,11 +4,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-  "dev": "tsx watch src/server.ts",
-  "build": "tsc",
-  "start": "node dist/server.js",
-  "seed": "tsx src/seed.ts"
-},
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "seed": "tsx src/seed.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

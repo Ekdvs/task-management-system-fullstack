@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  /* Surfaces */
+  --color-canvas: #F6F5F0;
+  --color-surface: #FFFFFF;
+  --color-surface-sunken: #EFEDE5;
+  --color-border: #E3E0D5;
+
+  /* Ink */
+  --color-ink: #1C2128;
+  --color-ink-muted: #6B7076;
+  --color-ink-faint: #9A9C9F;
+
+  /* Brand */
+  --color-brand: #2F5D5A;
+  --color-brand-strong: #234745;
+  --color-brand-soft: #DEEAE8;
+
+  /* Accent (used sparingly: focus rings, current nav item, primary CTA hover) */
+  --color-accent: #B75B39;
+  --color-accent-soft: #F3E2D8;
+
+  /* Status */
+  --color-pending: #C99A2E;
+  --color-pending-soft: #F7EDD3;
+  --color-progress: #2F6FA6;
+  --color-progress-soft: #DCE9F3;
+  --color-done: #3F8F5F;
+  --color-done-soft: #DEEEE1;
+  --color-overdue: #C1443C;
+  --color-overdue-soft: #F6DEDB;
+
+  /* Priority */
+  --color-low: #6B9C7D;
+  --color-medium: #C99A2E;
+  --color-high: #C1443C;
+}
+
+@theme inline {
+  --color-canvas: var(--color-canvas);
+  --color-surface: var(--color-surface);
+  --color-surface-sunken: var(--color-surface-sunken);
+  --color-border: var(--color-border);
+  --color-ink: var(--color-ink);
+  --color-ink-muted: var(--color-ink-muted);
+  --color-ink-faint: var(--color-ink-faint);
+  --color-brand: var(--color-brand);
+  --color-brand-strong: var(--color-brand-strong);
+  --color-brand-soft: var(--color-brand-soft);
+  --color-accent: var(--color-accent);
+  --color-accent-soft: var(--color-accent-soft);
+  --color-pending: var(--color-pending);
+  --color-pending-soft: var(--color-pending-soft);
+  --color-progress: var(--color-progress);
+  --color-progress-soft: var(--color-progress-soft);
+  --color-done: var(--color-done);
+  --color-done-soft: var(--color-done-soft);
+  --color-overdue: var(--color-overdue);
+  --color-overdue-soft: var(--color-overdue-soft);
+  --color-low: var(--color-low);
+  --color-medium: var(--color-medium);
+  --color-high: var(--color-high);
+
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-plex), ui-monospace, SFMono-Regular, monospace;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* Visible keyboard focus everywhere */
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
