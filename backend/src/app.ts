@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { errorHandler, notFound } from "./middleware/error.middleware.js";
 import Authrouter from "./routers/authRouter.js";
+import taskRouter from "./routers/task.routes.js";
 
 
 dotenv.config();
@@ -15,7 +16,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get("/health", (_req, res) => res.status(200).json({ message:"sever running" }));
 
-app.use("/api/user",Authrouter);
+app.use("/api/auth",Authrouter);
+app.use("/api/auth",taskRouter);
 
 app.use(notFound);
 app.use(errorHandler);
