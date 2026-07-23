@@ -21,7 +21,8 @@ export default function ThemeToggle() {
       onClick={() =>
         setTheme(theme === "dark" ? "light" : "dark")
       }
-      className="rounded-lg border border-gray-300 p-2 hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800"
+      className="rounded-lg border border-border p-2 text-ink transition hover:bg-surface-sunken"
+      aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
     >
       {theme === "dark" ? (
         <Sun size={18} />
